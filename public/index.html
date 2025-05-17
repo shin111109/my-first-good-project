@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Room Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <!-- Login -->
+  <div id="login-section">
+    <form id="login-form">
+      <h1>Room Chat</h1>
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="text" id="room" placeholder="Room" required />
+      <button id="button" type="submit">Join</button>
+    </form>
+  </div>
+  <button id="delete-messages" style="display: none;">Delete Messages</button>
+
+  <!-- Chat -->
+  <div class="container">
+    <div id="chat-section" style="display: none;">
+
+
+      <ul id="messages"></ul>
+  
+      
+    </div>
+    <form id="chat-form">
+      <input id="message" type="text" autocomplete="off" required />
+      <button id="message-send">Send</button>
+    </form>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
